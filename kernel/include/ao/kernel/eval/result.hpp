@@ -92,19 +92,17 @@ struct Result {
     // This is the number of samples that we can process in one pass
     static constexpr Index N = 256;
 
-    // If we're using AVX for evaluation, then our floats are simply
-    // pointers to the first member of the __m256 array
 #ifdef __AVX__
-
     typedef std::array<__m256, N/8> AVXArray;
     typedef std::vector<AVXArray, _AlignedAllocator<AVXArray>> AVXVector;
 
-public:
     AVXVector mf;
     AVXVector mdx;
     AVXVector mdy;
     AVXVector mdz;
 
+    // If we're using AVX for evaluation, then our floats are simply
+    // pointers to the first member of the __m256 array
     float (*f)[N];
     float (*dx)[N];
     float (*dy)[N];
