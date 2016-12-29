@@ -86,3 +86,10 @@
 (format #t "Exported charm in ~a sec\n"
         (/ (- (get-internal-real-time) start-time 0.0)
            internal-time-units-per-second))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(define quarter (intersection
+    (cube '(0 0 0) '(1 1 1))
+    (sphere '(0 0 0) 1)
+))
+(ao-export-mesh quarter "meshes/quarter.stl" 20 '(-1 -1 -1) '(2 2 2))
