@@ -126,6 +126,14 @@ extern "C"
 
 ////////////////////////////////////////////////////////////////////////////////
 
+    /*
+     *  Resets the cache
+     *  This frees memory if there are no Trees with shared_ptrs to the cache
+     */
+    void cache_reset();
+
+////////////////////////////////////////////////////////////////////////////////
+
     void window_show_tree(char* filename, char* name, Tree* tree);
     void window_watch_file(char* dir, char* file);
     void window_clear_frames();
