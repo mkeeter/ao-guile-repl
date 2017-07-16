@@ -153,13 +153,14 @@ void Window::mouseButton(int button, int action, int mods)
 
     if (action == GLFW_PRESS)
     {
-        if (button == GLFW_MOUSE_BUTTON_1)
-        {
-            drag_mode = WINDOW_DRAG_PAN;
-        }
-        else if (button == GLFW_MOUSE_BUTTON_2)
+        if (button == GLFW_MOUSE_BUTTON_2 ||
+           (button == GLFW_MOUSE_BUTTON_1 && (mods & GLFW_MOD_CONTROL)))
         {
             drag_mode = WINDOW_DRAG_ROTATE;
+        }
+        else if (button == GLFW_MOUSE_BUTTON_1)
+        {
+            drag_mode = WINDOW_DRAG_PAN;
         }
     }
     else
