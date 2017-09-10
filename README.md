@@ -1,3 +1,6 @@
+## Notice
+This branch is deprecated; future development will take place on `master`.
+
 ## About
 See the TURTLE of enormous girth!
 
