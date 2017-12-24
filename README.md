@@ -1,5 +1,5 @@
 ## Notice
-This branch is deprecated; future development will take place on `master`.
+This implementation is deprecated; future development will take place [here](https://github.com/mkeeter/ao).
 
 ## About
 See the TURTLE of enormous girth!
